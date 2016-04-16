@@ -25,9 +25,9 @@ def sendMail():
 	msg = Message('Hello', sender = 'tt7976897@gmail.com', recipients = [sendTo])
    	msg.body = sendWhat
    	mail.send(msg)
-	return 'sent'
+	return '<h1>Your message has been sent!<h1> <br> Thanks for using the mail system!'
     except Exception as e:
-        return str(e)
+        return 'There was an error while trying to send the email: '+ str(e)
 
 
 if __name__ == "__main__":
